@@ -8,7 +8,16 @@
 </head>
 <body>
     <h1>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ducimus porro sed illum, natus laboriosam voluptatum aliquid repellendus, voluptas quam minima explicabo molestias culpa molestiae maiores id reiciendis praesentium itaque.
+        Product
     </h1>
+    <form action='/addProduct/' method="POST">{% csrf_token %}
+    <label>Product Name</label> <input type="text" name="productName">
+    <label>Product ID</label> <input type="text" name="productID">
+    <label>Category</label> <select name="category">
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Apparels">Apparels</option>
+                            </select>
+    <input type="submit" value="Add Product">
+    </form>
 </body>
 </html>
