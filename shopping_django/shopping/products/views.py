@@ -8,6 +8,11 @@ def productView(request):
     productObjects=product_details.objects.all()
     return render(request,'products.html',{'product_details':productObjects})
 
+def homeView(request):
+    #renders the products.html
+    
+    return render(request,'home.html')
+
 def customerView(request):
     #renders the products.html
     customerObjects=customer.objects.all()
