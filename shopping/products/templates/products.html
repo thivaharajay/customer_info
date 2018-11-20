@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {background: linear-gradient(to right, #000046, #1cb5e0);}
+    label {color:blue;}
+    </style>
+<body>
+    <h1>
+        Product
+    </h1>
+    <form style="text-align:center" action='/addProduct/' method="POST">{% csrf_token %}
+    <label>Product Name</label> <input type="text" name="productName"></br>
+    <label>volPlus</label> <input type="text" name="volPlus"></br>
+    <label>volUNLD</label> <input type="text" name="volUNLD"></br>
+    <label>volSUPER</label> <input type="text" name="volSUPER"></br>
+    <label>SUPER</label> <input type="text" name="SUPER"></br>
+    <label>volCDIESEL</label> <input type="text" name="volCDIESEL"></br>
+    <label>CDIESEL</label> <input type="text" name="CDIESEL"></br>
+    <label>volRDIESEL</label> <input type="text" name="volRDIESEL"></br>
+    <label>RDIESEL</label> <input type="text" name="RDIESEL"></br>
+    <label>OIL</label> <input type="text" name="OIL"></br>
+    <label>MISC</label> <input type="text" name="MISC"></br>
+    <label>TAX</label> <input type="text" name="TAX"></br>
+    
+    <input type="submit" value="Add Product"></br>
+    </form>
+
+</body>
+</html>
