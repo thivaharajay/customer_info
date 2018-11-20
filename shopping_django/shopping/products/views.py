@@ -21,6 +21,17 @@ def customerView(request):
 
 def addProduct(request):
    # category=request.POST.get('va')
+    volPlus=int(request.POST['volPlus'])
+    volUNLD=int(request.POST['volUNLD'])
+    volSUPER=int(request.POST['volSUPER'])
+    SUPER=int(request.POST['SUPER'])
+    volCDIESEL=int(request.POST['volCDIESEL'])
+    CDIESEL=int(request.POST['CDIESEL'])
+    volRDIESEL=int(request.POST['volRDIESEL'])
+    RDIESEL=int(request.POST['RDIESEL'])
+    OIL=int(request.POST['OIL'])
+    MISC=int(request.POST['MISC'])
+    TAX=int(request.POST['TAX'])
     add_prod = product_details(productName=request.POST['productName'],
                                 volPlus=request.POST['volPlus'],
                                 volUNLD=request.POST['volUNLD'],
@@ -33,11 +44,10 @@ def addProduct(request):
                                 OIL=request.POST['OIL'],
                                 MISC=request.POST['MISC'],
                                 TAX=request.POST['TAX'],
-                                AMT_TOTAL=request.POST['AMT_TOTAL']
-                                
+                                AMT_TOTAL=volPlus+volUNLD+volSUPER+SUPER+volCDIESEL+CDIESEL+volRDIESEL+RDIESEL+OIL+MISC+TAX
                                 )
-    add_prod.save()
     
+    add_prod.save()
     return HttpResponseRedirect('/products/')
     #db.connection.close_all()
 def addCustomer(request):
@@ -48,4 +58,8 @@ def addCustomer(request):
     add_cus.save()
     
     return HttpResponseRedirect('/customer/')
+
+
+
+
 
