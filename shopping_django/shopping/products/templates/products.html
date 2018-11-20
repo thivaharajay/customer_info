@@ -10,14 +10,21 @@
     <h1>
         Product
     </h1>
-    <form action='/addProduct/' method="POST">{% csrf_token %}
-    <label>Product Name</label> <input type="text" name="productName">
-    <label>Product ID</label> <input type="text" name="productID">
-    <label>Category</label> <select name="category">
-                                    <option value="Electronics">Electronics</option>
-                                    <option value="Apparels">Apparels</option>
-                            </select>
-    <input type="submit" value="Add Product">
+    <form style="text-align:center" action='/addProduct/' method="POST">{% csrf_token %}
+    <label>Product Name</label> <input type="text" name="productName"></br>
+    <label>volPlus</label> <input type="text" name="volPlus"></br>
+    <label>volUNLD</label> <input type="text" name="volUNLD"></br>
+    <label>volSUPER</label> <input type="text" name="volSUPER"></br>
+    <label>SUPER</label> <input type="text" name="SUPER"></br>
+    <label>volCDIESEL</label> <input type="text" name="volCDIESEL"></br>
+    <label>CDIESEL</label> <input type="text" name="CDIESEL"></br>
+    <label>volRDIESEL</label> <input type="text" name="volRDIESEL"></br>
+    <label>RDIESEL</label> <input type="text" name="RDIESEL"></br>
+    <label>OIL</label> <input type="text" name="OIL"></br>
+    <label>MISC</label> <input type="text" name="MISC"></br>
+    <label>TAX</label> <input type="text" name="TAX"></br>
+    <label>AMT_TOTAL</label> <input type="text" name="AMT_TOTAL"></br>
+    <input type="submit" value="Add Product"></br>
     </form>
 </body>
 </html>
