@@ -14,6 +14,7 @@
     <h1>
         Customer
     </h1>
+    
     <form style="text-align:center" action='/addCustomer/' method="POST">{% csrf_token %}
     <label>Customer Name</label> <input type="text" name="customerName"></br>
     <label>phoneNumber</label> <input type="text" name="phoneNumber"></br>
@@ -23,5 +24,10 @@
     
     <input type="submit" value="Add Customer">
     </form>
+
+    {% for item in customer %}
+    <h1>{{item.customerName}}</h1>
+    <h1>{{item.phoneNumber}}</h1>
+    {% endfor %}
 </body>
 </html>
