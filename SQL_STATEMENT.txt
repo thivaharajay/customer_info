@@ -1,0 +1,34 @@
+CREATE TABLE `products_customer` (
+	`id`	integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`customerName`	text,
+	`Street_Address`	text,
+	`Address_Line_2`	TEXT,
+	`City`	TEXT,
+	`State`	TEXT,
+	`Country`	TEXT,
+	`Zip_Code`	integer,
+	`Email`	TEXT,
+	`phoneNumber`	integer
+);
+
+CREATE TABLE `products_product_details` (
+	`id`	integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`customer_id`	integer NOT NULL,
+	`Invoice_Date`	TEXT,
+	`Invoice_Number`	INTEGER,
+	`volPlus`	integer,
+	`$_PLUS`	INTEGER,
+	`volUNLD`	integer,
+	`$_UNLD`	INTEGER,
+	`volSUPER`	integer,
+	`$_SUPER`	INTEGER,
+	`volCDIESEL`	integer,
+	`$_C_DIESEL`	INTEGER,
+	`volRDIESEL`	integer,
+	`$_R_DIESEL`	integer,
+	`OIL`	integer,
+	`MISC`	integer,
+	`TAX`	integer,
+	`AMT_TOTAL`	integer,
+	FOREIGN KEY(`customer_id`) REFERENCES `products_customer`(`id`)
+);
